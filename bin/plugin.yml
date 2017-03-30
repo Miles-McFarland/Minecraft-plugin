@@ -1,0 +1,32 @@
+name: PluginACM
+main: commands.PluginACM
+version: 0.1.4
+commands:
+    spawn:
+      usage: /<command> <user>
+      description: Set Spawn
+      permission: acmp.spwan
+    setspawn:
+      usage: /<command> <user>
+      description: Go to the Spawn
+      permission: acmp.setspawn
+    heal:
+      usage: /<command> <user>
+      description: Heal-Self
+      permission: acmp.heal
+    feed:
+      usage: /<command> <user>
+      description: Feed-Self
+      permission: acmp.feed
+    kill:
+      usage: /<command> <user>
+      description: kill-self
+      permission: acmp.kill
+    help:
+      usage: /<command> <user>
+      description: help
+      permission: acmp.help
+    kick:
+      usage: /<command> <user>
+      description: kick
+      permission: acmp.kick
