@@ -1,6 +1,6 @@
 name: PluginACM
 main: commands.PluginACM
-version: 0.1.4
+version: 0.1.5
 commands:
     spawn:
       usage: /<command> <user>
