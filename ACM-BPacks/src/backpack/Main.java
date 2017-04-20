@@ -14,7 +14,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -31,23 +30,6 @@ public class Main extends JavaPlugin implements Listener{
 			backpacks.put(e.getPlayer().getUniqueId(), inv);
 		}
 		
-		
-
-	
-@EventHandler
-public void onPlayerLeave(PlayerQuitEvent e){
-	if(!getConfig().contains("backpacks." + e.getPlayer().getUniqueId())){
-		getConfig().createSection("backpacks." + e.getPlayer().getUniqueId());
-	}
-	char c = 'a';
-	for(ItemStack itemStack : backpacks.get(e.getPlayer().getUniqueId())){
-		if(itemStack != null){
-			saveItem(getConfig().createSection("backpacks." + e.getPlayer().getUniqueId() + "." + c++), itemStack);
-		}
-	}
-	saveConfig();
-	
-}
 public void onEnable(){
 	Bukkit.getServer().getPluginManager().registerEvents(this, this);
 }
