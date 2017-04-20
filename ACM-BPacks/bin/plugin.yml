@@ -1,0 +1,7 @@
+name: BackpackB
+main: backpack.Main
+version: 1.0
+commands:
+  backpack:
+    usage: /<command>
+    descrition: Open Your BackPack
